@@ -36,24 +36,28 @@ A modular and extensible data pipeline for ETL (Extract, Transform, Load) operat
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd data-pipeline
 ```
 
 2. Create a virtual environment:
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Set up environment variables:
-Create a `.env` file in the project root with the following variables:
+   Create a `.env` file in the project root with the following variables:
+
 ```
 DB_HOST=localhost
 DB_PORT=5432
@@ -69,6 +73,7 @@ DB_PASSWORD=your_password
 1. Configure your pipeline in `src/config.py` or create a custom configuration file.
 
 2. Run the pipeline:
+
 ```python
 from src.pipeline import DataPipeline
 
@@ -131,15 +136,3 @@ query = "SELECT * FROM processed_data"
 output_dir = PROCESSED_DATA_DIR / 'visualizations'
 generate_visualizations(query, output_dir)
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
